@@ -12,11 +12,11 @@
 			<div class="inner-wrap">
 			<label for="nombre">Nombre</label>
 			<br/>
-			<input type="text" name="name" class="item_requerid" size="20" maxlength="25"/>
+			<input type="text" name="name" class="item_requerid" size="20" maxlength="25" required/>
 			<br/>
 			<label for="client_id">Contraseña</label>
 			<br/>
-			<input type="password"  name="passwd"  class="item_requerid" size="20"/>
+			<input type="password"  name="passwd"  class="item_requerid" size="20" required/>
 			<br/>
 		</fieldset>
 		<p>

@@ -12,16 +12,16 @@
         <div class="inner-wrap">
 		<label for="name">Nombre</label>
 		<br/>
-		<input type="text" name="name" class="item_requerid" size="20" maxlength="50" value=""
+		<input type="text" name="name" class="item_requerid" size="20" maxlength="50" value="" required
 		 />
 		<br/><label for="name">Email</label>
 		<br/>
-		<input type="text" name="email" class="item_requerid" size="20" maxlength="50" value=""
+		<input type="text" name="email" class="item_requerid" size="20" maxlength="50" value="" required
 		 />
 		<br/>
         <label for="password">Contraseña</label>
 		<br/>
-		<input type="password" name="passwd" class="item_requerid" size="20" maxlength="50" value=""
+		<input type="password" name="passwd" class="item_requerid" size="20" maxlength="50" value="" required
 		 />
 		<br/>
 		<p><input type="submit" value="Enviar">
