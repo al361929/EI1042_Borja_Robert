@@ -1,3 +1,9 @@
+<!--**
+* * @title: EI1036_42 P1 
+* * @author  Robert <al375874@uji.es> Borja <al361929@uji.es>
+* * @copyright 2019 Robert Borja
+* * @license CC-BY-NC-SA
+* *-->
 <?php
 
 function autentificar_usuario($table)
@@ -30,16 +36,6 @@ function autentificar_usuario($table)
         if($entra == "no")
             print "<h1> Datos incorrectos :( </h1>";
     }  
-    // echo "SESION CLIENTE ESTABLECIDA";
-    // $_SESSION["client_id"] = 5;
-    // $cesta[] = "";
-    // $_SESSION["cesta"]=$cesta;
     }
-    /*
-    buscar usuario y passwd en DB y comparar con $_POST
-    según el resultado fijar la variable de sesion of mostar error
-
-    $_SESSION["usuario"] = role
-    */
 
 ?>
