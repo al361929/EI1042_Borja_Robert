@@ -67,6 +67,12 @@ switch ($action) {
         }
         $central = "/compraRealizada.php";
         break;
+    case "subeFoto":
+        $central = "/partials/addFoto.php";
+        break;
+    case "upload":
+        
+        break;
     default:
         $data["error"] = "Accion No permitida";
         $central = "/home.php";

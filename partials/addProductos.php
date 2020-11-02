@@ -24,6 +24,7 @@
 		<br/>
 		<input type="text" name="foto_url" class="item_requerid" size="20" maxlength="50" value=""
 		 />
+		<input type="button" value="Subir Foto" onclick="openDialog()">
 		<br/>
 		<p><input type="submit" value="Enviar">
 		<input type="reset" value="Deshacer">
@@ -31,4 +32,14 @@
         </div>
 	</form>
     </div>
+	<div id="popup" class="popup">
+    <a onclick="closeDialog('popup');" class="close"></a>
+    <div>
+    <form action="?action=upload" method="post" enctype="multipart/form-data">
+		Selecciona	una	imagen:
+		<input type="file" accept="image/*" name="tmp_file" id="upload">
+		<input type="submit" value="SUBIR" name="submit">
+    </form>
+    </div>
+	</div>
 </main>
