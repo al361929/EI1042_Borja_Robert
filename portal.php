@@ -16,6 +16,8 @@ include(dirname(__FILE__)."/includes/borraCarrito.php");
 include(dirname(__FILE__)."/includes/comprar.php");
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
+include(dirname(__FILE__)."/incluides/upload.php");
+
 
 if (isset($_REQUEST['action']))
     $action = $_REQUEST["action"];
@@ -67,11 +69,9 @@ switch ($action) {
         }
         $central = "/compraRealizada.php";
         break;
-    case "subeFoto":
-        $central = "/partials/addFoto.php";
-        break;
     case "upload":
-        
+        upload();
+        $central = "/partials/addProductos.php";
         break;
     default:
         $data["error"] = "Accion No permitida";

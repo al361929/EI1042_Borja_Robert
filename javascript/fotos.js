@@ -1,28 +1,46 @@
-function ventanaSecundaria (URL){ 
-    window.open(URL,"ventana1","width=120,height=300,scrollbars=NO,toolbar=NO,location=NO,status=NO,menubar=NO") 
- } 
- 
- function handleFiles(e)	{
-    let ctx	=	document.getElementById('canvas').getContext('2d');
-    let img	=	new	Image;
-    img.src	=	URL.createObjectURL(e.target.files[0]);
-    img.onload	=	function()	{
-                    ctx.drawImage(img,	20,20);
-    }
+function handleFiles(e)	{
+  let ctx	=	document.getElementById('canvas').getContext('2d');
+  let cnv = document.getElementById('canvas');
+  let img	=	new	Image;
+  cnv.style.display = "block";
+  cnv.style.width = "200%";
+  img.src	=	URL.createObjectURL(e.target.files[0]);
+  img.onload	=	function()	{
+                  ctx.drawImage(img,	 33, 71, 104, 124, 21, 20, 87, 104);
+  }
 }
 
-function openDialog() {
-    $('#overlay').fadeIn('fast', function() {
-        $('#popup').css('display','block');
-        $('#popup').animate({'left':'30%'},500);
-    });
+function cargaDatos(){
+  document.getElementById('nombre').value = localStorage.getItem('name').value;
+  document.getElementById('precio').value = localStorage.getItem('price').value;
 }
- 
-function closeDialog(id) {
-    $('#'+id).css('position','absolute');
-    $('#'+id).animate({'left':'-100%'}, 500, function() {
-        $('#'+id).css('position','fixed');
-        $('#'+id).css('left','100%');
-        $('#overlay').fadeOut('fast');
-    });
+
+function guardaDatos(){
+  let name = document.getElementById('nombre').value;
+  let price = document.getElementById('precio').value;
+  localStorage.setItem('name', JSON.stringify(name));
+  localStorage.setItem('price', JSON.stringify(price));
+}
+
+
+var ventana = document.getElementById("ventanaFlotante");
+var btn = document.getElementById("myBtn");
+var span = document.getElementsByClassName("close")[0];
+
+// Para abrir la ventana
+btn.onclick = function() {
+  ventana.style.display = "block";
+  let inputName = document.getElementById('nombre');
+
+}
+
+// Para cerrar la ventana desde la cruz
+span.onclick = function() {
+  ventana.style.display = "none";
+}
+// Para cerrar la ventana haciendo click fuera de la ventana
+window.onclick = function(event) {
+  if (event.target == ventana) {
+    ventana.style.display = "none";
+  }
 }

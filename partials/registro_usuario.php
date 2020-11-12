@@ -7,26 +7,25 @@
  <main>
     <div class="form-style-10">
 	<form action="?action=registrar" method="POST">
-
-        <div class="section"><span>1</span>Registro</div>
-        <div class="inner-wrap">
-		<label for="name">Nombre</label>
-		<br/>
-		<input type="text" name="name" class="item_requerid" size="20" maxlength="50" value="" required
-		 />
-		<br/><label for="name">Email</label>
-		<br/>
-		<input type="text" name="email" class="item_requerid" size="20" maxlength="50" value="" required
-		 />
-		<br/>
-        <label for="password">Contraseña</label>
-		<br/>
-		<input type="password" name="passwd" class="item_requerid" size="20" maxlength="50" value="" required
-		 />
-		<br/>
-		<p><input type="submit" value="Enviar">
-		<input type="reset" value="Deshacer">
-		</p>
+        <div class="section">Registro</div>
+        	<div class="inner-wrap">
+				<label for="name">Nombre</label>
+				<br/>
+				<input type="text" name="name" class="item_requerid" size="20" maxlength="50" value="" required
+				/>
+				<br/><label for="name">Email</label>
+				<br/>
+				<input type="text" name="email" class="item_requerid" size="20" maxlength="50" value="" required
+				/>
+				<br/>
+				<label for="password">Contraseña</label>
+				<br/>
+				<input type="password" name="passwd" class="item_requerid" size="20" maxlength="50" value="" required
+				/>
+				<br/>
+				<p><input type="submit" value="Enviar">
+				<input type="reset" value="Deshacer">
+			</div>
         </div>
 	</form>
     </div>

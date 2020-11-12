@@ -7,39 +7,45 @@
  <main>
     <div class="form-style-10">
 	<form action="?action=registrarProducto" method="POST">
-
-        <div class="section"><span>1</span>Registrar producto</div>
+        <div class="section">Registrar producto</div>
         <div class="inner-wrap">
         <label for="name">Nombre del producto</label>
 		<br/>
-		<input type="text" name="name" class="item_requerid" size="20" maxlength="50" value=""
+		<input id="nombre" type="text" name="name" class="item_requerid" size="20" maxlength="50" value=""
 		 />
 		<br/>
 		<label for="name">Precio del producto</label>
 		<br/>
-		<input type="text" name="price" class="item_requerid" size="20" maxlength="50" value=""
+		<input id="precio" type="text" name="price" class="item_requerid" size="20" maxlength="50" value=""
 		 />
 		<br/>
 		<label for="Imagen">URL imagen</label>
 		<br/>
 		<input type="text" name="foto_url" class="item_requerid" size="20" maxlength="50" value=""
 		 />
-		<input type="button" value="Subir Foto" onclick="openDialog()">
+		
 		<br/>
 		<p><input type="submit" value="Enviar">
 		<input type="reset" value="Deshacer">
 		</p>
-        </div>
+		</div>
 	</form>
-    </div>
-	<div id="popup" class="popup">
-    <a onclick="closeDialog('popup');" class="close"></a>
-    <div>
-    <form action="?action=upload" method="post" enctype="multipart/form-data">
-		Selecciona	una	imagen:
-		<input type="file" accept="image/*" name="tmp_file" id="upload">
-		<input type="submit" value="SUBIR" name="submit">
-    </form>
-    </div>
+	<button id="myBtn" type="upload" class="upload">Subir Foto</button>
+	<input type="button" value="Carga datos" name="carga datos" class="subir" onclick="cargaDatos()">
+
+	</div>
+	<div id="ventanaFlotante" class="float">
+		<div class="float-content">
+			<span class="close">&times;</span>
+			<form class="form-foto" action="?action=upload" method="post" enctype="multipart/form-data">
+				Selecciona	una	imagen:
+				<input type="file" accept="image/*" name="tmp_file" id="upload" onchange="handleFiles(event)">
+				<br/><br/>
+				<canvas id="canvas" class="canvas"></canvas>
+				<br/><br/>
+				<input type="submit" value="SUBIR" name="submit" class="subir" onclick="guardaDatos()">
+			</form>
+		</div>
+
 	</div>
 </main>

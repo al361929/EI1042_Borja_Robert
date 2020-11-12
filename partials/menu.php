@@ -24,8 +24,5 @@
 		<li>
 			<a href="?action=carrito">Carrito</a>
 		</li>
-		<li>
-			<a href="?action=subeFoto">Subir foto</a>
-		</li>
 	</ul>
 </nav>
