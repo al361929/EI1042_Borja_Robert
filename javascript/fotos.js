@@ -11,8 +11,10 @@ function handleFiles(e)	{
 }
 
 function cargaDatos(){
-  document.getElementById('nombre').value = localStorage.getItem('name').value;
-  document.getElementById('precio').value = localStorage.getItem('price').value;
+  document.getElementById('nombre').value = localStorage.getItem('name').replace('"','').replace('"','')
+  document.getElementById('precio').value = localStorage.getItem('price').replace('"','').replace('"','')
+  localStorage.removeItem('name')
+  localStorage.removeItem('price')
 }
 
 function guardaDatos(){
@@ -38,6 +40,7 @@ btn.onclick = function() {
 span.onclick = function() {
   ventana.style.display = "none";
 }
+
 // Para cerrar la ventana haciendo click fuera de la ventana
 window.onclick = function(event) {
   if (event.target == ventana) {
