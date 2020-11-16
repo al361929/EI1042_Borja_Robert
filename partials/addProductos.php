@@ -39,7 +39,7 @@
 			<span class="close">&times;</span>
 			<form class="form-foto" action="?action=upload" method="post" enctype="multipart/form-data">
 				Selecciona	una	imagen:
-				<input type="file" accept="image/*" name="tmp_file" id="upload" onchange="handleFiles(event)">
+				<input type="file" accept="image/*" name="file" id="file" onchange="handleFiles(event)">
 				<br/><br/>
 				<canvas id="canvas" class="canvas"></canvas>
 				<br/><br/>
