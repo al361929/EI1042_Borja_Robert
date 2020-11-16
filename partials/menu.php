@@ -22,7 +22,10 @@
 			<a href="?action=productos">Listar productos/servicios</a>
 		</li>
 		<li>
-			<a href="?action=carrito">Carrito</a>
+			<a id="btnCarrito">
+				<img src="/img/carro.png" id="carro" alt="carro" class="carro" />
+			</a>
+			
 		</li>
 	</ul>
 </nav>

@@ -46,6 +46,5 @@
 				<input type="submit" value="SUBIR" name="submit" class="subir" onclick="guardaDatos()">
 			</form>
 		</div>
-
 	</div>
 </main>

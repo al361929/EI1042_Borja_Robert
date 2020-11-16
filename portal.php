@@ -17,6 +17,8 @@ include(dirname(__FILE__)."/includes/comprar.php");
 include(dirname(__FILE__)."/partials/header.php");
 include(dirname(__FILE__)."/partials/menu.php");
 include(dirname(__FILE__)."/includes/upload.php");
+include(dirname(__FILE__)."/partials/carritoFlotante.php");
+
 
 
 if (isset($_REQUEST['action']))

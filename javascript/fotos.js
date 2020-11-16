@@ -25,6 +25,31 @@ function guardaDatos(){
 }
 
 
+// VENTANA FLOTANTE SUBIR CARRITO
+var ventanaCarrito = document.getElementById("ventanaCarrito");
+var btnCarrito = document.getElementById("btnCarrito");
+var spanCarrito = document.getElementsByClassName("close")[0];
+
+// Para abrir la ventana
+btnCarrito.onclick = function() {
+  ventanaCarrito.style.display = "block";
+}
+
+// Para cerrar la ventana desde la cruz
+spanCarrito.onclick = function() {
+  ventanaCarrito.style.display = "none";
+}
+
+// Para cerrar la ventana haciendo click fuera de la ventana
+window.onclick = function(event) {
+  if (event.target == ventanaCarrito) {
+    ventanaCarrito.style.display = "none";
+  }
+}
+
+
+
+// VENTANA FLOTANTE SUBIR FOTOS
 var ventana = document.getElementById("ventanaFlotante");
 var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
@@ -32,8 +57,6 @@ var span = document.getElementsByClassName("close")[0];
 // Para abrir la ventana
 btn.onclick = function() {
   ventana.style.display = "block";
-  let inputName = document.getElementById('nombre');
-
 }
 
 // Para cerrar la ventana desde la cruz
