@@ -3,10 +3,9 @@ function handleFiles(e)	{
   let cnv = document.getElementById('canvas');
   let img	=	new	Image;
   cnv.style.display = "block";
-  cnv.style.width = "200%";
   img.src	=	URL.createObjectURL(e.target.files[0]);
   img.onload	=	function()	{
-                  ctx.drawImage(img,	 33, 71, 104, 124, 21, 20, 87, 104);
+                  ctx.drawImage(img,0,0);
   }
 }
 

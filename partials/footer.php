@@ -15,6 +15,7 @@
 		<p> Visit us at:12006 UJI </p>
 	</address>
 </footer>
+<script src="./javascript/validacion.js"></script>
 <script src="./javascript/fotos.js"></script>
 </body>
 

@@ -6,16 +6,16 @@
  * * -->
  <main>
     <div class="form-style-10">
-	<form action="?action=registrar" method="POST">
+	<form id="form" action="?action=registrar" method="POST" novalidate>
         <div class="section">Registro</div>
         	<div class="inner-wrap">
 				<label for="name">Nombre</label>
 				<br/>
 				<input type="text" name="name" class="item_requerid" size="20" maxlength="50" value="" required
 				/>
-				<br/><label for="name">Email</label>
+				<br/><label for="email">Email</label>
 				<br/>
-				<input type="text" name="email" class="item_requerid" size="20" maxlength="50" value="" required
+				<input type="email" name="email" id="email" class="item_requerid" size="20" maxlength="50" value="" required
 				/>
 				<br/>
 				<label for="password">Contraseña</label>
