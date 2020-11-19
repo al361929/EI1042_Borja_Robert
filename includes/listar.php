@@ -23,11 +23,11 @@ function listar($table)
             print "</thead>";
             foreach ($rows as $row) {
                 print "<tr>";
-                $product=array_values($row)[0];
+                $product2=array_values($row)[1];
                 foreach ($row as $key => $val) {
-                    echo "<td>", $val, "</td>";
+                    echo "<td>", $val, "</td>"; 
                 }
-                echo '<td><button><a href="?action=add&client_id='.$_SESSION['client_id'].'&product='.$product.'">Añadir al carrito</a></button></td>';
+                echo '<td><button onclick="anyadeArticulo()">Añadir al carrito</button></td>';
                 print "</tr>";
             }
             print "</table>";

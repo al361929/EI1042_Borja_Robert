@@ -26,6 +26,10 @@ ul {
   margin-top: 0;
 }
 
+.ulCarrito{
+  background-color: white;
+}
+
 ol,
 ul {
   padding: 0;
