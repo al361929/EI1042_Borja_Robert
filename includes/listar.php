@@ -25,7 +25,11 @@ function listar($table)
                 print "<tr>";
                 $product2=array_values($row)[1];
                 foreach ($row as $key => $val) {
-                    echo "<td>", $val, "</td>"; 
+                    if($key == "foto_url"){
+                        echo '<td><image src="./image/'.$val.'"class="imgProducto"></image></td>';
+                    }else{
+                        echo "<td>", $val, "</td>";
+                    }
                 }
                 echo '<td><button onclick="anyadeArticulo()">Añadir al carrito</button></td>';
                 print "</tr>";

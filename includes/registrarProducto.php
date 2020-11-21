@@ -19,10 +19,10 @@ function handler($pdo,$table)
                        
     echo $query;
     try {
-        $a=array($_REQUEST['name'],$_REQUEST['price'],$_REQUEST['foto_url']);
+        $a=array($_POST['name'],$_POST['price'],$_POST['foto_url']);
         print_r ($a);
         $consult = $pdo->prepare($query);
-        $a=$consult->execute(array($_REQUEST['name'],$_REQUEST['price'],$_REQUEST['foto_url']));
+        $a=$consult->execute(array($_POST['name'],$_POST['price'],$_POST['foto_url']));
         if (1>$a)echo "InCorrecto";
     
     } catch (PDOExeption $e) {

@@ -604,3 +604,8 @@ a.close {
   border:1px solid #000000;
   display: none;
 }
+
+.imgProducto{
+  width: 120px;
+  height: 120px;
+}

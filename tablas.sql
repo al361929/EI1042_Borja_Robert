@@ -1,3 +1,6 @@
+DROP TABLE compra;
+DROP TABLE producto;
+DROP TABLE cliente;
 CREATE TABLE  IF NOT EXISTS cliente (client_id SERIAL PRIMARY KEY, 
                                     name TEXT NOT NULL, 
                                     email TEXT NOT NULL,

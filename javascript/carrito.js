@@ -5,7 +5,6 @@ function creaCarrito(){
     carrito.push("arandelas")
     carrito.push("tornillos")
     localStorage.setItem("carrito", JSON.stringify(carrito));
-  
 }
 
 function cargaCarrito(){
@@ -51,7 +50,7 @@ function eliminarArticulo(){
 // VENTANA FLOTANTE SUBIR CARRITO
 var ventanaCarrito = document.getElementById("ventanaCarrito");
 var btnCarrito = document.getElementById("btnCarrito");
-var spanCarrito = document.getElementsByClassName("close")[0];
+var spanCarrito = document.getElementsByClassName("closeCarrito")[0];
 
 // Para abrir la ventana
 btnCarrito.onclick = function() {

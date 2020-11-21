@@ -11,39 +11,37 @@
         <div class="inner-wrap">
         <label for="name">Nombre del producto</label>
 		<br/>
-		<input id="nombre" type="text" name="name" class="item_requerid" size="20" maxlength="50" value=""
+		<input id="nombre" type="text" name="name" class="item_requerid" size="20" maxlength="50" value="" required
 		 />
 		<br/>
 		<label for="name">Precio del producto</label>
 		<br/>
-		<input id="precio" type="text" name="price" class="item_requerid" size="20" maxlength="50" value=""
+		<input id="precio" type="number" name="price" class="item_requerid" size="20" maxlength="50" value="" required
 		 />
 		<br/>
 		<label for="Imagen">URL imagen</label>
 		<br/>
-		<input type="text" name="foto_url" class="item_requerid" size="20" maxlength="50" value=""
-		 />
-		
+		<input id="foto_url" type="text" name="foto_url" class="item_requerid" size="20" maxlength="50" value="" required readonly
+		/>
 		<br/>
 		<p><input type="submit" value="Enviar">
 		<input type="reset" value="Deshacer">
 		</p>
 		</div>
+		<input type="hidden" id="formArticulo">
 	</form>
 	<button id="myBtn" type="upload" class="upload">Subir Foto</button>
-	<input type="button" value="Carga datos" name="carga datos" class="subir" onclick="cargaDatos()">
-
 	</div>
 	<div id="ventanaFlotante" class="float">
 		<div class="float-content">
 			<span class="close">&times;</span>
-			<form class="form-foto" action="?action=upload" method="post" enctype="multipart/form-data">
+			<form class="form-foto" id="form-foto" action="?action=upload" method="post" enctype="multipart/form-data">
 				Selecciona	una	imagen:
 				<input type="file" accept="image/*" name="file" id="file" onchange="handleFiles(event)">
 				<br/><br/>
 				<canvas id="canvas" class="canvas"></canvas>
 				<br/><br/>
-				<input type="submit" value="SUBIR" name="submit" class="subir" onclick="guardaDatos()">
+				<input type="submit" value="SUBIR" name="submit" class="subir" onclick="guardaDatos(); compruebaTamaño();">
 			</form>
 		</div>
 	</div>
