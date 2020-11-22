@@ -33,7 +33,7 @@ function compruebaTamaño(){
     let form = document.getElementById('form-foto')
     let file = document.getElementById('file');
     form.onsubmit = function(){
-      if(file.files.item(0).size > 2000){
+      if(file.files.item(0).size > 2000000){ // SOn bytes
         alert("La imagen no puede superar los 2MB")
         return false
       }

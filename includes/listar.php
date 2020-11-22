@@ -23,7 +23,8 @@ function listar($table)
             print "</thead>";
             foreach ($rows as $row) {
                 print "<tr>";
-                $product2=array_values($row)[1];
+                $id_product = array_values($row)[0];
+                $product=array_values($row)[1];
                 foreach ($row as $key => $val) {
                     if($key == "foto_url"){
                         echo '<td><image src="./image/'.$val.'"class="imgProducto"></image></td>';
@@ -31,7 +32,7 @@ function listar($table)
                         echo "<td>", $val, "</td>";
                     }
                 }
-                echo '<td><button onclick="anyadeArticulo()">Añadir al carrito</button></td>';
+                echo '<td><button onclick="anyadeArticulo('.$id_product.',`'.$product.'`)">Añadir al carrito</button></td>';
                 print "</tr>";
             }
             print "</table>";

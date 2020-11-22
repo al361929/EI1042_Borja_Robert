@@ -7,4 +7,7 @@
 <?php
 
 print "<h1>Compra Realizada</h1>";
+print "<br></br>";
+$compra = $_POST['productes'];
+print "<h2>Has comprado los siguientes productos: ".$compra."</h2>"
 ?>

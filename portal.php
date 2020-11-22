@@ -64,11 +64,11 @@ switch ($action) {
     case "productos":
         $central = listar("producto");
         break;
-    case "comprar":
-        foreach($_SESSION['cesta'] as $key => $value){
-            comprar($pdo,"compra",$value[1]);
-            unset($_SESSION['cesta'][$key]);
-        }
+    case "comprar":        
+        $compra = $_REQUEST['productes'];
+        $ex_compra = explode(",", $compra);
+        foreach($ex_compra as $id)
+            comprar($pdo,"compra",$id);
         $central = "/compraRealizada.php";
         break;
     case "upload":

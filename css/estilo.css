@@ -592,6 +592,21 @@ a.close {
   cursor: pointer;
 }
 
+.closeCarrito {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0 0 0 auto;
+}
+
+.closeCarrito:hover,
+.closeCarrito:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .form-foto{
   display: flex;
   flex-direction: column;
