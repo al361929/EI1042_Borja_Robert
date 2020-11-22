@@ -3,7 +3,7 @@
         <span class="closeCarrito">&times;</span>
         
         <section class="lista">
-            <ul id="list">
+            <ul id="list" class="liArticulo">
             </ul>
         </section>
         <form action="?action=comprar" method="POST">

@@ -624,3 +624,13 @@ a.close {
   width: 120px;
   height: 120px;
 }
+
+.liArticulo{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.boton{
+  margin: 15px;
+}
