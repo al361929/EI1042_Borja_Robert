@@ -1,10 +1,11 @@
 <?php
-function listarJSON ($table){
+include(dirname(__FILE__)."/includes/ejecutarSQL.php");
+include(dirname(__FILE__)."/gestionBD.php");
+
+
+function listarJSON ($pdo, $table){
     global $pdo;
-    header('Content-type:
-    application/json');
-    $result = $pdo->prepare("SELECT
-    * FROM $table");
+    $result = $pdo->prepare("SELECT * FROM $table");
     $result->execute();
     $datos = $result->fetchAll(PDO::FETCH_ASSOC);
     $res = [];
@@ -25,4 +26,6 @@ function listarJSON ($table){
     }
     echo json_encode($res);
 }
+header('Content-type: application/json');
+listarJSON($pdo,"producto");
 ?>

@@ -11,6 +11,7 @@ include(dirname(__FILE__)."/includes/ejecutarSQL.php");
 include(dirname(__FILE__)."/gestionBD.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
 include(dirname(__FILE__)."/includes/listar.php");
+include(dirname(__FILE__)."/includes/listarJSON.php");
 include(dirname(__FILE__)."/includes/datos.php");
 include(dirname(__FILE__)."/includes/añadirCarrito.php");
 include(dirname(__FILE__)."/includes/borraCarrito.php");
@@ -63,7 +64,7 @@ switch ($action) {
         $central = "/includes/registrarProducto.php";
         break;
     case "productos":
-        $central = listarJSON("producto");
+        $central = listar2();
         //$central = listar("producto");
         break;
     case "comprar":        
