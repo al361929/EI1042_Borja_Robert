@@ -21,7 +21,9 @@ form.onsubmit = function(){
             
         }
         else if(element.type === "password"){
-            if (!element.value.match(/[a-z]/g) || element.value.match(/[A-Z]/g) || element.value.match(/[0-9]/g) || element.value.match(/[^a-zA-Z\d]/g) || element.value.length >= 8){
+            if (element.value.match(/[a-z]/g) && element.value.match(/[A-Z]/g) && element.value.match(/[0-9]/g) && element.value.match(/[^a-zA-Z\d]/g) && element.value.length > 8){
+            }
+            else{
                 alert('La contraseña no cumple con los requisitos:\nUn caracter en minuscula\nUn caracter en mayuscula\nUn digito\nUn caracter especial\nLa contraseña debe tener por lo menos 8 caracteres');
                 return false;
             }
