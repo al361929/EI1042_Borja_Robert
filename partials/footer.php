@@ -18,6 +18,7 @@
 <script src="./javascript/validacion.js"></script>
 <script src="./javascript/fotos.js"></script>
 <script src="./javascript/carrito.js"></script>
+<script src="./javascript/datos.js"></script>
 </body>
 
 </html>

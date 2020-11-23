@@ -632,5 +632,18 @@ a.close {
 }
 
 .boton{
-  margin: 15px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+/*********************************************************************************/
+/* Práctica 3                                                                    */
+/*********************************************************************************/
+
+.visor {
+  background-color: lightblue;
+  width: 100px;
+  overflow-x: scroll;
+  display:flex;
 }
