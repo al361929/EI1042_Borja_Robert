@@ -45,6 +45,13 @@ function anyadeArticulo(id_articulo, articulo){
   localStorage.setItem("carrito", JSON.stringify(articulos));
 }
 
+function anyadeArticulo2(){
+  var articulos = JSON.parse(localStorage.getItem("carrito"));
+  let newArticulo = [this.id, this.nombre];
+  articulos.push(newArticulo);
+  localStorage.setItem("carrito", JSON.stringify(articulos));
+}
+
 
 function borrarArticulo(){
   var carrito = JSON.parse(localStorage.getItem('carrito'))

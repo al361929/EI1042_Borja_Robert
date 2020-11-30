@@ -21,6 +21,9 @@ function listarJSON ($pdo, $table){
             if($key === 'foto_url'){
                 $array['url'] = $val;
             }
+            if($key === 'product_id'){
+                $array['id'] = $val;
+            }
         }
         array_push($res,$array);
     }

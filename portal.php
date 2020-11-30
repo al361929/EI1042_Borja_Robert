@@ -12,7 +12,6 @@ include(dirname(__FILE__)."/gestionBD.php");
 include(dirname(__FILE__)."/includes/autentificar_usuario.php");
 include(dirname(__FILE__)."/includes/listar.php");
 include(dirname(__FILE__)."/includes/listarJSON.php");
-include(dirname(__FILE__)."/includes/datos.php");
 include(dirname(__FILE__)."/includes/añadirCarrito.php");
 include(dirname(__FILE__)."/includes/borraCarrito.php");
 include(dirname(__FILE__)."/includes/comprar.php");
