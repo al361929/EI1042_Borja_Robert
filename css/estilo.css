@@ -661,3 +661,8 @@ a.close {
   border: 5px solid #97bfcc;
   padding: 13px;
 }
+
+.buscador{
+  margin-left: 37%;
+  margin-block: 2%;
+}
