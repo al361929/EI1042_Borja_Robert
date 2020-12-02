@@ -1,6 +1,8 @@
+// Cargamos los datos cuando se cargue el visor
 if(document.getElementById('visor') != null){
     document.getElementById('visor').onload = cargaDatos();
 } 
+
 function cargaDatos(){
     fetch('./datos.php', {
     method: 'POST',
@@ -17,10 +19,12 @@ function cargaDatos(){
 .catch(err => console.log('Fetch Error :', err))
 }
 
+// Añadimos los artículos al visor y al dataList
 function anañadeItem(lista){
-    console.log('ETNTRO AL METODO')
     let long = lista.length
     for(var i = 0; i<long; i++){
+
+        //Para agregar los elementos al visor
         console.log(lista[i])
         let item = document.createElement('div')
         item.classList.add('item')
@@ -43,6 +47,19 @@ function anañadeItem(lista){
         item.appendChild(boton)
 
         document.getElementById('visor').appendChild(item)
+
+        // Para agregar los elementos al buscador
+
+        let option = document.createElement('option')
+        option.value = lista[i].nombre
+        document.getElementById('articulos').appendChild(option)
+
+        document.cre
     }    
 
+}
+
+function muestraBusqueda(){
+    let articulo = document.getElementById('buscador');
+    document.getElementsById()
 }
