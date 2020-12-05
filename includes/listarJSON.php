@@ -12,6 +12,13 @@ function listar2()
         print '<input list="articulos" name="buscador" id="buscador" class="buscador" onchange="muestraBusqueda()">';
         print '<datalist id="articulos">';
         print '</datalist>';
+        print '<br/>';
+        print '<br/>';
+        print '<label for="min">Min</label>';
+        print '<input type="number" id="min" name="min"/>';
+        print '<label for="max">Max</label>';
+        print '<input type="number" id="max" name="max"/>';
+        print '<button onclick="cargaPrecios()" type="button" id="minmax">Filtrar</button>';
         print '<div class="visor" id="visor" onload="cargaDatos();">';
         print '</div>';
     }else{

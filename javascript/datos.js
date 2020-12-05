@@ -3,6 +3,22 @@ if(document.getElementById('visor') != null){
     document.getElementById('visor').onload = cargaDatos();
 } 
 
+function cargaPrecios(){
+    fetch('./precios.php?min=' + document.getElementById('min').value + '&max=' + document.getElementById('max').value, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 
+                   'Content-Type': 'application/json' },
+    })
+    .then(response => {
+        if (response.ok)
+            return response.json()
+        else
+            throw response.statusText
+    })
+    .then(json => anañadeItem(json))
+    .catch(err => console.log('Fetch Error :', err))
+}
+
 function cargaDatos(){
     fetch('./datos.php', {
     method: 'POST',
