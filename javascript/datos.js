@@ -80,7 +80,8 @@ function anañadeItem(lista){
         articulos[lista[i].nombre] = lista[i].id
     }        
     if(!visor.hasChildNodes()){
-        let mensaje = document.createElement('p')
+        let mensaje = document.createElement('h2')
+        mensaje.classList.add('msg')
         mensaje.innerHTML = "No hay articulos entre esos precios!"
         visor.appendChild(mensaje)
     }

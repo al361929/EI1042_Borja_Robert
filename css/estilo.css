@@ -671,3 +671,8 @@ a.close {
     align-content: center;
     text-align: center;
 }
+
+.msg{
+  text-align: center;
+  padding: 8%;
+}
