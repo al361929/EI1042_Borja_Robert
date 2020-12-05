@@ -37,6 +37,7 @@ function cargaDatos(){
 
 // Añadimos los artículos al visor y al dataList
 function anañadeItem(lista){
+    document.getElementById('visor').innerHTML = ""
     let long = lista.length
     for(var i = 0; i<long; i++){
 
