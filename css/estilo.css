@@ -666,3 +666,8 @@ a.close {
   margin-left: 37%;
   margin-block: 2%;
 }
+
+.minmax {
+    align-content: center;
+    text-align: center;
+}

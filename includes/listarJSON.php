@@ -14,11 +14,13 @@ function listar2()
         print '</datalist>';
         print '<br/>';
         print '<br/>';
+        print '<div class="minmax" id="minmax">';
         print '<label for="min">Min</label>';
         print '<input type="number" id="min" name="min"/>';
         print '<label for="max">Max</label>';
         print '<input type="number" id="max" name="max"/>';
         print '<button onclick="cargaPrecios()" type="button" id="minmax">Filtrar</button>';
+        print '</div>';
         print '<div class="visor" id="visor" onload="cargaDatos();">';
         print '</div>';
     }else{

@@ -37,7 +37,8 @@ function cargaDatos(){
 
 // Añadimos los artículos al visor y al dataList
 function anañadeItem(lista){
-    document.getElementById('visor').innerHTML = ""
+    let visor = document.getElementById('visor')
+    visor.innerHTML = ""
     let long = lista.length
     for(var i = 0; i<long; i++){
 
@@ -67,12 +68,19 @@ function anañadeItem(lista){
 
         // Para agregar los elementos al buscador
 
+
         let option = document.createElement('option')
         option.value = lista[i].nombre
         document.getElementById('articulos').appendChild(option)
 
         document.cre
     }    
+    if(!visor.hasChildNodes()){
+        console.log("hola")
+        let mensaje = document.createElement('p')
+        mensaje.innerHTML = "No hay articulos entre esos precios!"
+        visor.appendChild(mensaje)
+    }
 
 }
 
