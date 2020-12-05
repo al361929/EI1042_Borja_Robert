@@ -3,6 +3,10 @@ if(document.getElementById('visor') != null){
     document.getElementById('visor').onload = cargaDatos();
 } 
 
+//Declaramos la variable global
+
+var articulos = {}
+
 function cargaPrecios(){
     fetch('./precios.php?min=' + document.getElementById('min').value + '&max=' + document.getElementById('max').value, {
         method: 'POST',
@@ -43,7 +47,6 @@ function anañadeItem(lista){
     for(var i = 0; i<long; i++){
 
         //Para agregar los elementos al visor
-        console.log(lista[i])
         let item = document.createElement('div')
         item.classList.add('item')
         item.id = lista[i].id
@@ -68,15 +71,15 @@ function anañadeItem(lista){
 
         // Para agregar los elementos al buscador
 
-
         let option = document.createElement('option')
         option.value = lista[i].nombre
         document.getElementById('articulos').appendChild(option)
 
-        document.cre
-    }    
+        // Añadimos los elementos a la variable global
+
+        articulos[lista[i].nombre] = lista[i].id
+    }        
     if(!visor.hasChildNodes()){
-        console.log("hola")
         let mensaje = document.createElement('p')
         mensaje.innerHTML = "No hay articulos entre esos precios!"
         visor.appendChild(mensaje)
@@ -85,6 +88,8 @@ function anañadeItem(lista){
 }
 
 function muestraBusqueda(){
-    let articulo = document.getElementById('buscador');
-    document.getElementsById()
+    let articulo = document.getElementById('buscador')
+    let id = articulos[articulo.value]
+    console.log(id)
+    document.getElementById(id).scrollIntoView()
 }
