@@ -1,0 +1,29 @@
+.onsenItem{
+    width: 100%;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}    
+
+.itemName{
+    text-align: center;
+    font-size: 30px; 
+    margin-top: 20px; 
+    color: white;
+}
+
+.itemImage{
+    width: 80%;
+    height: 80%;
+}
+
+.imageCont{
+    text-align: center;
+    margin-block-start: auto;
+}
+
+.itemButton{
+    align-self: center;
+    padding: 8%;
+}

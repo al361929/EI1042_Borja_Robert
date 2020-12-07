@@ -42,6 +42,7 @@ function cargaDatos(){
 // Añadimos los artículos al visor y al dataList
 function anañadeItem(lista){
     let visor = document.getElementById('visor')
+    console.log(lista)
     visor.innerHTML = ""
     let long = lista.length
     for(var i = 0; i<long; i++){
@@ -93,4 +94,24 @@ function muestraBusqueda(){
     let id = articulos[articulo.value]
     console.log(id)
     document.getElementById(id).scrollIntoView()
+}
+
+
+
+// ####### FUNCIONES PARA LA VERSIÓN DE ONSEN ########
+
+function cargaDatosOnsen(){
+    fetch('./datos.php', {
+    method: 'POST',
+    headers: { 'Accept': 'application/json', 
+               'Content-Type': 'application/json' },
+})
+.then(response => {
+    if (response.ok)
+        return response.json()
+    else
+        throw response.statusText
+})
+.then(json => addItem(json))
+.catch(err => console.log('Fetch Error :', err))
 }
