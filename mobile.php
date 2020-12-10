@@ -78,8 +78,6 @@
     </ons-toolbar>
    
     <ons-list id="lista">
-       <ons-list-item><span class="miItem">BLUE</span> <ons-button class="elimina">X</ons-button></ons-list-item>
-      <ons-list-item><span class="miItem">RED</span> <ons-button class="elimina">X</ons-button></ons-list-item>
     </ons-list>
 
     <ons-button modifier="large">Comprar</ons-button>

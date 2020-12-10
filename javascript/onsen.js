@@ -56,8 +56,23 @@ var prev = function() {
 
 
   function anyadeArticuloOnsen(){
-    var articulos = JSON.parse(localStorage.getItem("carrito"));
-    let newArticulo = [this.id, this.nombre];
-    articulos.push(newArticulo);
-    localStorage.setItem("carrito", JSON.stringify(articulos));
+    let item = document.createElement('ons-list-item')
+    item.id = this.id
+
+    let articulo = document.createElement('span')
+    articulo.classList.add('miItem')
+    articulo.innerHTML = this.nombre
+
+    let boton = document.createElement('ons-button')
+    boton.innerHTML = "X"
+    boton.classList.add('elimina')
+    boton.onclick = eliminaArticulo.bind(item)
+
+    item.appendChild(articulo)
+    item.appendChild(boton)
+    document.getElementById('lista').appendChild(item)
+  }
+
+  function eliminaArticulo(){
+    document.getElementById('lista').removeChild(this)
   }
