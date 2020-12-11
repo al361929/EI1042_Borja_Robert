@@ -80,7 +80,7 @@
     <ons-list id="lista">
     </ons-list>
 
-    <ons-button modifier="large">Comprar</ons-button>
+    <ons-button modifier="large" onclick="cargaCompra()">Comprar</ons-button>
   </ons-page>
 
 </template>

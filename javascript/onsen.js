@@ -76,3 +76,18 @@ var prev = function() {
   function eliminaArticulo(){
     document.getElementById('lista').removeChild(this)
   }
+
+  function respuesta(resp){
+    
+    if (resp['resultado'] == "OK"){
+        ons.notification.alert('Resultado OK');
+        let lista = document.getElementById('lista')
+        while(lista.hasChildNodes()){
+          lista.removeChild(lista.firstChild)
+      }
+
+    }
+    else{
+        ons.notification.alert('Resultado KO');
+    }
+}

@@ -7,6 +7,30 @@ if(document.getElementById('visor') != null){
 
 var articulos = {}
 
+
+function cargaCompra(){
+    let lista = document.getElementById('lista').childNodes
+    let producs = []
+    for (var i = 0; i < lista.length; ++i) {
+        if (lista[i].nodeName == 'ONS-LIST-ITEM'){
+            producs.push(lista[i].id)
+        }
+    }
+    fetch('./compras.php?productos=' + producs, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json', 
+                   'Content-Type': 'application/json' },
+    })
+    .then(response => {
+        if (response.ok)
+            return response.json()
+        else
+            throw response.statusText
+    })
+    .then(json => respuesta(json))
+    .catch(err => console.log('Fetch Error :', err))
+}
+
 function cargaPrecios(){
     fetch('./precios.php?min=' + document.getElementById('min').value + '&max=' + document.getElementById('max').value, {
         method: 'POST',
